@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    
+    <!-- Lien CDN de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="weather-app">
+        <h1 class="app-title text-primary">Weather App</h1>
+        
+        <!-- Barre de recherche -->
+        <div class="search-container mb-4">
+            <input id="cityInput" class="form-control" type="text" placeholder="Rechercher une ville">
+            <button id="searchBtn" class="btn btn-info ml-2">Rechercher</button>
+        </div>
+
+        <!-- Météo actuelle -->
+        <div class="weather-info">
+            <h3 id="cityName" class="city-name">Paris</h3>
+            <div class="temp-container">
+                <div id="temperature" class="temp">22°C</div>
+                <div class="weather-icon">
+                    <img id="weatherIcon" src="http://openweathermap.org/img/wn/10d.png" alt="Weather Icon">
+                </div>
+            </div>
+            <p id="weatherDesc" class="weather-description">Nuageux</p>
+        </div>
+
+        <!-- Prévisions météo -->
+        <div class="forecast-container">
+            <div class="forecast-item">
+                <img src="http://openweathermap.org/img/wn/10d.png" alt="Day 1">
+                <h4>Jour 1</h4>
+                <p>18°C</p>
+            </div>
+            <div class="forecast-item">
+                <img src="http://openweathermap.org/img/wn/10d.png" alt="Day 2">
+                <h4>Jour 2</h4>
+                <p>19°C</p>
+            </div>
+            <!-- Ajouter plus de jours si nécessaire -->
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Scripts personnalisés pour la logique météo -->
+    <script src="app.js"></script>
+</body>
+</html>

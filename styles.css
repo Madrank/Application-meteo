@@ -1,0 +1,161 @@
+/* Réinitialisation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8; /* Couleur de fond douce */
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteneur de l'application météo */
+.weather-app {
+  background-color: #ffffff; /* Fond blanc pour plus de clarté */
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de l'application */
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a8a; /* Bleu moderne */
+  margin-bottom: 20px;
+}
+
+/* Barre de recherche */
+.search-container input {
+  width: 70%;
+  margin: 0 auto;
+  /* padding: 10px; */
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 2px solid #ddd;
+  background-color: #f9fafb; /* Fond clair pour le champ */
+}
+
+.search-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #4CAF50; /* Vert lumineux */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #45a049;
+}
+
+/* Section Météo actuelle */
+.weather-info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9fafb; /* Fond clair pour la météo */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info .city-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.temp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-right: 20px;
+  color: #4CAF50; /* Vert lumineux pour la température */
+}
+
+.weather-icon img {
+  width: 80px; /* Agrandir l'icône */
+}
+
+.weather-description {
+  font-size: 1.2rem;
+  color: #777;
+  text-transform: capitalize;
+}
+
+/* Prévisions de 7 jours */
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.forecast-item {
+  background-color: #f0f4f8; /* Fond doux pour chaque prévision */
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 120px;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-item:hover {
+  transform: translateY(-8px);
+}
+
+.forecast-item img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.forecast-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.forecast-item p {
+  font-size: 1rem;
+  color: #4CAF50; /* Vert pour la température */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .forecast-container {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .forecast-item {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+
+  .temp {
+      font-size: 2.5rem;
+  }
+}
